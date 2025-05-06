@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dasteen Blog</title>
 
     <link rel="stylesheet" href="css/reset.css">
@@ -24,11 +26,13 @@
                         <a href="#" class="menu__link">About Me</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Search</a>
+                        <a href="#" class="menu__link menu__link-search">
+                            <img class="menu__link-search-img" src="images/icon/search.svg" alt="Search">
+                            Search</a>
                     </li>
                 </ul>
             </nav>
-            <button class="header__btn button">
+            <button type="button" class="header__btn button">
                 <img class="header__icon" src="images/icon/header-icon.svg" alt="icon">
                 buy Me a Coffee
             </button>
@@ -61,42 +65,52 @@
     <section class="category">
         <div class="container">
             <div class="category__inner">
-                <div class="content-top category__info">
+                <div class="category__info">
                     <h2 class="content-top__title category__title">Browse the category</h2>
-                    <a href="#" class="content-top__link category__link">see all category
+                    <a href="#" class="content-top__link category__link" target="_blank" id="category-card__more">see all category
                         <img class="content-top__icon category__link-icon" src="images/icon/arrow-right.svg" alt="Arrow">
                     </a>
                 </div>
                 <div class="category__cards">
-                    <div class="category__card">
-                        <div class="category__card-wrap">
-                            <img class="category__card-img" src="images/icon/css-icon.svg" alt="Photo logo">
-                        </div>
-                        <p class="category__card-text">CSS</p>
+                    <div class="category__card" id="category-card__css">
+                        <a class="category__card-link" href="#" target="_blank">
+                            <div class="category__card-wrap">
+                                <img class="category__card-img" src="images/icon/css-icon.svg" alt="Photo logo">
+                            </div>
+                            <p class="category__card-text">CSS</p>
+                        </a>
                     </div>
-                    <div class="category__card">
-                        <div class="category__card-wrap">
-                            <img class="category__card-img" src="images/icon/js-icon.svg" alt="Photo logo">
-                        </div>
-                        <p class="category__card-text">javascript</p>
+                    <div class="category__card" id="category-card__js">
+                        <a class="category__card-link" href="#" target="_blank">
+                            <div class="category__card-wrap">
+                                <img class="category__card-img" src="images/icon/js-icon.svg" alt="Photo logo">
+                            </div>
+                            <p class="category__card-text">javascript</p>
+                        </a>
                     </div>
-                    <div class="category__card">
-                        <div class="category__card-wrap">
-                            <img class="category__card-img" src="images/icon/tailwind-icon.svg" alt="Photo logo">
-                        </div>
-                        <p class="category__card-text">Tailwind</p>
+                    <div class="category__card" id="category-card__tailwind">
+                        <a class="category__card-link" href="#" target="_blank">
+                            <div class="category__card-wrap">
+                                <img class="category__card-img" src="images/icon/tailwind-icon.svg" alt="Photo logo">
+                            </div>
+                            <p class="category__card-text">Tailwind</p>
+                        </a>
                     </div>
-                    <div class="category__card">
-                        <div class="category__card-wrap">
-                            <img class="category__card-img" src="images/icon/vue-icon.svg" alt="Photo logo">
-                        </div>
-                        <p class="category__card-text">Vue JS</p>
+                    <div class="category__card" id="category-card__vue">
+                        <a class="category__card-link" href="#" target="_blank">
+                            <div class="category__card-wrap">
+                                <img class="category__card-img" src="images/icon/vue-icon.svg" alt="Photo logo">
+                            </div>
+                            <p class="category__card-text">Vue JS</p>
+                        </a>
                     </div>
-                    <div class="category__card">
-                        <div class="category__card-wrap">
-                            <img class="category__card-img" src="images/icon/react-icon.svg" alt="Photo logo">
-                        </div>
-                        <p class="category__card-text">React JS</p>
+                    <div class="category__card" id="category-card__react">
+                        <a class="category__card-link" href="#" target="_blank">
+                            <div class="category__card-wrap">
+                                <img class="category__card-img" src="images/icon/react-icon.svg" alt="Photo logo">
+                            </div>
+                            <p class="category__card-text">React JS</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -106,10 +120,10 @@
     <div class="articles-section">
         <section class="articles">
             <div class="container">
-                <div class="articles__inner">
+                <div class="content__inner articles__inner">
                     <div class=" content-top articles__info">
                         <h2 class="content-top__title">Featured Article</h2>
-                        <a class=" content-top__link" href="#">See All Article
+                        <a class=" content-top__link" href="#" target="_blank">See All Article
                             <img class="content-top__icon" src="images/icon/arrow-right.svg" alt="Arrow">
                         </a>
                     </div>
@@ -117,73 +131,108 @@
                     <div class="cards articles__cards">
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article1.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Fundamental of javascript</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article1.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Fundamental of javascript</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article2.svg" alt="Photo logo">
-                                <h3 class="card-wrap__title">Grid CSS make your life easier</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article2.svg" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Grid CSS make your life easier</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article3.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Make animated light mode and dark mode toggle with CSS</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article3.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Make animated light mode and dark mode toggle with CSS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article4.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Make tic tac toe games with react JS</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article4.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Make tic tac toe games with react JS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -191,10 +240,10 @@
 
         <section class="css">
             <div class="container">
-                <div class="css__inner">
+                <div class="content__inner css__inner">
                     <div class="content-top">
                         <h2 class="content-top__title">CSS</h2>
-                        <a class="content-top__link" href="#">See All Article
+                        <a class="content-top__link" href="#" target="_blank">See All Article
                             <img class="content-top__icon" src="images/icon/arrow-right.svg" alt="Arrow">
                         </a>
                     </div>
@@ -202,73 +251,109 @@
                     <div class="cards">
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/css1.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Flexbox cSS : Everything you need to know</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/css1.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Flexbox cSS : Everything you need to know</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article2.svg" alt="Photo logo">
-                                <h3 class="card-wrap__title">Grid CSS make your life easier</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article2.svg" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Grid CSS make your life easier</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/css3.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">3 easy way to make div center</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/css3.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">3 easy way to make div center</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/css3.png" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article3.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Make animated light mode and dark mode toggle with CSS</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article3.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Make animated light mode and dark mode toggle with CSS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -276,10 +361,10 @@
 
         <section class="javascript">
             <div class="container">
-                <div class="javascript__inner">
+                <div class="content__inner javascript__inner">
                     <div class="content-top">
                         <h2 class="content-top__title">javascript</h2>
-                        <a class="content-top__link" href="#">See All Article
+                        <a class="content-top__link" href="#" target="_blank">See All Article
                             <img class="content-top__icon" src="images/icon/arrow-right.svg" alt="Arrow">
                         </a>
                     </div>
@@ -287,73 +372,110 @@
                     <div class="cards">
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/js1.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">array in javasript - Learn JS #3</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/js1.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">array in javasript - Learn JS #3</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article1.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Fundamental of javascript</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article1.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Fundamental of javascript</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/js3.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">7 project with javascript you must try for your portfolio</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/js3.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">7 project with javascript you must try for your portfolio</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/css3.png" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/js4.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">make simple calculator with javascript</h3>
-                            </div>
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/js4.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">make simple calculator with javascript</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -361,82 +483,122 @@
 
         <section class="react">
             <div class="container">
-                <div class="react__inner">
+                <div class="content__inner react__inner">
                     <div class="content-top">
                         <h2 class="content-top__title">React JS</h2>
-                        <a class="content-top__link" href="#">See All Article
+                        <a class="content-top__link" href="#" target="_blank">See All Article
                             <img class="content-top__icon" src="images/icon/arrow-right.svg" alt="Arrow">
                         </a>
                     </div>
 
                     <div class="cards">
 
-                        <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/react1.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">first month of leaning react jS</h3>
-                            </div>
+                        <div class="card react__card">
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/react1.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">first month of leaning react jS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
-                        <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/react2.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">build markdown editor with react JS</h3>
-                            </div>
+                        <div class="card react__card">
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/react2.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">build markdown editor with react JS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
-                        <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/react3.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">getting started with react JS</h3>
-                            </div>
+                        <div class="card react__card">
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/react3.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">getting started with react JS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/css3.png" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
-                        <div class="card">
-                            <div class="card-wrap">
-                                <img class="card-wrap__img" src="images/article4.png" alt="Photo logo">
-                                <h3 class="card-wrap__title">Make tic tac toe games with react JS</h3>
-                            </div>
+                        <div class="card react__card">
+                            <a class="card__link" href="#" target="_blank">
+                                <div class="card-wrap">
+                                    <img class="card-wrap__img" src="images/article4.png" alt="Photo logo">
+                                    <h3 class="card-wrap__title">Make tic tac toe games with react JS</h3>
+                                </div>
 
-                            <div class="card-wrapper">
-                                <div class="card-wrapper__images">
-                                    <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                <div class="card-wrapper">
+                                    <div class="card-wrapper__images">
+                                        <img class="card-wrapper__img" src="images/photo-card.svg" alt="Photo">
+                                    </div>
+                                    <div class="card-wrapper__content">
+                                        <h4 class="card-wrapper__content-title">Dasteen</h4>
+                                        <ul class="card-wrapper__content-list">
+                                            <li class="card-wrapper__content-item">
+                                                Jan 10, 2022
+                                            </li>
+                                            <li class="card-wrapper__content-item">
+                                                3 min read
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-wrapper__content">
-                                    <h4 class="card-wrapper__content-title">Dasteen</h4>
-                                    <p class="card-wrapper__content-text">Jan 10, 2022∙3 min read</p>
-                                </div>
-                            </div>
+                            </a>
+
                         </div>
 
                     </div>
@@ -453,7 +615,9 @@
         <div class="container">
             <div class="subscribe__inner">
                 <div class="subscribe__content">
-                    <div class="subscribe__content-images"></div>
+                    <div class="subscribe__content-images">
+                        <img class="subscribe__content-img" src="images/subscribe-img.png" alt="Photo">
+                    </div>
                     <div class="subscribe__content-item">
                         <h2 class="subscribe__content-title">Subscribe For the lastest updates</h2>
                         <p class="subscribe__content-text">Subscribe to newsletter and never miss the new post every week.</p>
@@ -509,19 +673,19 @@
                             <h3 class="footer__content-title">Category</h3>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">CSS</a>
+                            <a class="footer__content-link" href="#category-card__css">CSS</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">Javascript</a>
+                            <a class="footer__content-link" href="#category-card__js">Javascript</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">Tailwind</a>
+                            <a class="footer__content-link" href="#category-card__tailwind">Tailwind</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">React JS</a>
+                            <a class="footer__content-link" href="#category-card__react">React JS</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">More Category</a>
+                            <a class="footer__content-link" href="#category-card__more">More Category</a>
                         </li>
                     </ul>
 
@@ -560,13 +724,13 @@
                             <a class="footer__content-link" href="#">Medium</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">Instagram</a>
+                            <a class="footer__content-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">Twitter</a>
+                            <a class="footer__content-link" href="https://x.com/" target="_blank">Twitter</a>
                         </li>
                         <li class="footer__content-item">
-                            <a class="footer__content-link" href="#">Facebook</a>
+                            <a class="footer__content-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
                         </li>
                     </ul>
                 </div>
@@ -577,3 +741,4 @@
 </footer>
 </body>
 </html>
+
